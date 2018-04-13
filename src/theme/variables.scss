@@ -14,6 +14,12 @@ $app-direction: ltr;
 
 @import "ionic.globals";
 
+@font-face {
+  font-family: 'Neucha';
+  src: url('../assets/fonts/Neucha.ttf') format('truetype');
+}
+$font-family-md-base: "Neucha";
+
 
 // Shared Variables
 // --------------------------------------------------

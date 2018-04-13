@@ -11,7 +11,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
     this.userName = 'Alexander Alexandrovich';
   }
-  showEvent() {
+  goToEvents() {
     this.navCtrl.push(EventPage);
   }
 }
