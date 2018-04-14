@@ -1,3 +1,11 @@
 page-event {
   font-family: "sans-serif";
+  ion-label {
+    white-space: normal;
+  }
+  ion-content {
+    ion-icon {
+      color: color($colors, secondary);
+    }
+  }
 }

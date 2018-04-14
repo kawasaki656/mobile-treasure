@@ -7,12 +7,97 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>event</ion-title>
+    <ion-title>{{name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list no-border>
+    <ion-list-header>
+      Информация
+    </ion-list-header>
+    <ion-item>
+      <b>Место: </b>
+      <span>г.Орша</span>
+      <br>
+      <b>Мест: </b>
+      <span>100</span>
+      <br>
+      <b>Участников: </b>
+      <span>34</span>
+      <br>
+      <b>Сложность: </b>
+      <span>3 кода</span>
+      <br>
+      <b>Начало: </b>
+      <span>ориентировочно 10.12.2018, 18:00</span>
+      <br>
+      <b>Обсуждение: </b>
+      <a href="onliner.by">Перейти</a>
+      <br>
+      <b>Стоимость: </b>
+      <span>5 BYN</span>
+      <br>
+      <b>Приз: </b>
+      <span>1) 150 BYN, 2) 50 BYN</span>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Правила
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='pin'></ion-icon>
+      <h2>В начале</h2>
+      <div>
+        <p>Вы получите доступ к первой подсказке в указанное в описании время. Подсказка даст вам информацию о месторасположении первого кода</p>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='pin'></ion-icon>
+      <h2>Затем</h2>
+      <div>
+        <p>Вам нужно будет ввести код в специальное поле ввода в приложении, после этого вы получите доступ к следующей подсказке</p>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='pin'></ion-icon>
+      <h2>В итоге</h2>
+      <div>
+        <p>Будут два победителя, первыми нашедшие коды. Информация о них будет храниться в нашей БД. Мы свяжемся с ними по указанному номеру телефона и вручим приз</p>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Участвовать
+    </ion-list-header>
+
+    <ion-card>
+      <ion-item>
+        <ion-icon color="subtle" large item-start name='information-circle'></ion-icon>
+        <h2>Внимание</h2>
+        <div>
+          <p>Перед оплатой вы подтверждаете, что прочитали правила игры и согласны участвовать в игре. После оплаты, вы получите доступ к игре и уже будет невозможно отменить участие.</p>
+        </div>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-icon color="subtle" large item-start name='help'></ion-icon>
+        <h2>Помощь</h2>
+        <div>
+          <p>Если у вас остались вопросы, пожалуйста свяжитесь с нами.</p>
+          <br>
+          <a href="onliner.by">Перейти</a>
+        </div>
+      </ion-item>
+    </ion-card>
+  </ion-list>
 
 </ion-content>

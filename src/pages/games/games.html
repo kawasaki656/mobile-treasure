@@ -9,17 +9,36 @@
 <ion-content padding>
   <ion-card>
     <ion-card-header>
-      Explore Nearby
+      <ion-item>
+        <h1>Первые кладоискатели</h1>
+        <p>Май 5, 2018</p>
+      </ion-item>
     </ion-card-header>
 
+    <img src="assets/imgs/Event1.jpg">
+
     <ion-card-content>
-      <ion-card-title>
-        Nine Inch Nails Live
-      </ion-card-title>
-      <p>
-        The most popular industrial group ever, and largely
-        responsible for bringing the music to a mass audience.
-      </p>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <b>Место: </b>
+            <span>г.Орша</span>
+            <br>
+            <b>Мест: </b>
+            <span>100</span>
+            <br>
+            <b>Участников: </b>
+            <span>34</span>
+          </ion-col>
+          <ion-col col-6>
+            <button ion-button color="primary" clear small icon-start>
+              <ion-icon name='ios-heart'></ion-icon>
+              30 Likes
+            </button>
+            <button ion-button block (click)="showEvent('Первые кладоискатели')">Открыть</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card-content>
   </ion-card>
 </ion-content>

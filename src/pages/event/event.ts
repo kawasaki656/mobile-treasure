@@ -15,7 +15,9 @@ import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular
 })
 export class EventPage {
 
+  name:string;
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+    this.name = navParams.get('name');
   }
 
   ionViewDidLoad() {
