@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Профиль
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3 style="text-align: center; padding-top: 30px">
+        <b>Участий: </b>
+        <span>0</span>
+        <br>
+        <br>
+        <b>Побед: </b>
+        <span>0</span>
+      </ion-col>
+      <ion-col col-6 style="text-align: center">
+        <img src="assets/svg/user1.svg">
+      </ion-col>
+      <ion-col col-3></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item>
+    <ion-label stacked>Телефон</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-icon name='ios-call' isActive="false" item-start></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Имя</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-icon name='ios-bookmark' isActive="false" item-start></ion-icon>
+  </ion-item>
+  <ion-item id="sms-item">
+    <ion-toggle checked="false"></ion-toggle>
+    <ion-label style="padding:8px 0">
+      СМС оповещение
+    </ion-label>
+    <ion-icon name='ios-mail' isActive="false" item-start></ion-icon>
+  </ion-item>
+  <ion-card>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='checkmark-circle-outline'></ion-icon>
+      <h2>Безопасность</h2>
+      <div>
+        <p>Ваши пользовательские данные мы обязуемся не передавать третьим лицам</p>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='alarm'></ion-icon>
+      <h2>Оповещение</h2>
+      <div>
+        <p>Включив SMS оповещение, вы будете получать письмо на ваш номер телефона за пол часа до начала игры</p>
+      </div>
+    </ion-item>
+  </ion-card>
+</ion-content>

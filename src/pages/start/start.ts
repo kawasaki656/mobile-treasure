@@ -21,12 +21,10 @@ export class StartPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StartPage');
     this.slides.effect = "fade";
   }
 
   goToHome() {
-    console.log(this.slides);
     this.navCtrl.push(TabsPage);
   }
 
