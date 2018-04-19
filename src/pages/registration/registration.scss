@@ -1,3 +1,15 @@
 page-registration {
-
+  #content {
+    text-align: center;
+    span {
+      vertical-align: -webkit-baseline-middle;
+      font-size: 20px;
+      color: color($colors, secondary);
+    }
+    #logo {
+      width: 100%;
+      margin: auto;
+      transition-delay: .5s;
+    }
+  }
 }

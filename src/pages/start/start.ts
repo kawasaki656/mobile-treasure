@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
 import {TabsPage} from "../tabs/tabs";
+import {RegistrationPage} from "../registration/registration";
 
 /**
  * Generated class for the StartPage page.
@@ -25,7 +26,7 @@ export class StartPage {
   }
 
   goToHome() {
-    this.navCtrl.push(TabsPage);
+    this.navCtrl.push(RegistrationPage);
   }
 
 }
