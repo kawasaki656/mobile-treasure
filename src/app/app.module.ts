@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { EventPage } from "../pages/event/event";
 import { StartPage } from "../pages/start/start";
 import {RegistrationPage} from "../pages/registration/registration";
+import { BrMaskerModule } from 'brmasker-ionic-3';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {RegistrationPage} from "../pages/registration/registration";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(cladApp)
+    IonicModule.forRoot(cladApp),
+    BrMaskerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

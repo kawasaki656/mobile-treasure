@@ -1,15 +1,32 @@
 page-registration {
+  font-family: "sans-serif";
+  #header {
+    div {
+      display: inline-block;
+      float: left;
+    }
+    .small-logo {
+      width: 100px !important;
+    }
+    .step {
+      padding-left: 10px;
+      span {
+        line-height: 100px;
+      }
+    }
+  }
   #content {
     text-align: center;
     span {
       vertical-align: -webkit-baseline-middle;
       font-size: 20px;
-      color: color($colors, secondary);
     }
     #logo {
       width: 100%;
       margin: auto;
-      transition-delay: .5s;
     }
+  }
+  .small-logo {
+    width: 100px;
   }
 }

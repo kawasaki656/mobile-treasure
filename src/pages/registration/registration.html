@@ -6,20 +6,69 @@
 -->
 <ion-content padding>
   <div id="content">
-    <div id="logo">
-      <img src="assets/svg/mapa.svg">
+    <div id="header">
+      <div id="logo" [class.small-logo]="step !=='start'">
+        <img src="assets/svg/mapa.svg" [class.small-logo]="step !=='start'">
+      </div>
+      <div class="step" *ngIf="step === 'registration'">
+        <span>Регистрация</span>
+      </div>
+      <div class="step" *ngIf="step === 'login'">
+        <span>Авторизация</span>
+      </div>
     </div>
-    <ion-item>
-      <ion-label stacked>Телефон</ion-label>
-      <ion-input type="text" placeholder="+375(**)***-**-**" (keyup)="change()" [(ngModel)]="telephone"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>Пароль</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <br>
-    <button ion-button color="secondary" clear large>Вход</button>
-    <span> / </span>
-    <button ion-button color="secondary" clear large>Регистрация</button>
+    <div *ngIf="step === 'start'">
+      <button ion-button color="secondary" (click)="goToLogin()" clear large>Вход</button>
+      <span> / </span>
+      <button ion-button color="secondary" (click)="goToRegistration()"clear large>Регистрация</button>
+    </div>
+    <div *ngIf="step === 'registration'">
+      <form (ngSubmit)="registration()">
+        <ion-item >
+          <ion-label stacked>Телефон</ion-label>
+          <ion-input type="text" placeholder="+375(**)***-**-**" [(ngModel)]="phone" [brmasker]="phoneMask" name="phone"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Пароль</ion-label>
+          <ion-input type="password" name="password-one" [(ngModel)]="pass1"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Подтвердить пароль</ion-label>
+          <ion-input type="password" name="password-two" [(ngModel)]="pass2"></ion-input>
+        </ion-item>
+        <br>
+        <ion-card>
+          <ion-item>
+            <ion-icon color="subtle" large item-start name='checkmark-circle-outline'></ion-icon>
+            <h2>Безопасность</h2>
+            <div>
+              <p>Ваши пользовательские данные мы обязуемся не передавать третьим лицам</p>
+            </div>
+          </ion-item>
+          <ion-item>
+            <ion-icon color="subtle" large item-start name='alert'></ion-icon>
+            <h2>Номер телефона</h2>
+            <div>
+              <p>Проверьте указанный вами номер телефона т.к. он будет использоваться и в качестве логина, и для оповещений</p>
+            </div>
+          </ion-item>
+        </ion-card>
+        <button ion-button type="button" (click)="goToStart()" clear>Назад</button>
+        <button ion-button type="submit" outline>Присоединиться</button>
+      </form>
+    </div>
+    <form (ngSubmit)="login()" *ngIf="step === 'login'">
+      <ion-item >
+        <ion-label stacked>Телефон</ion-label>
+        <ion-input type="text" placeholder="+375(**)***-**-**" [(ngModel)]="phone" [brmasker]="phoneMask" name="phone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Пароль</ion-label>
+        <ion-input type="password" name="password-one"></ion-input>
+      </ion-item>
+      <br>
+      <button ion-button type="button" (click)="goToStart()" clear>Назад</button>
+      <button ion-button type="submit" outline>Войти</button>
+    </form>
   </div>
 </ion-content>
