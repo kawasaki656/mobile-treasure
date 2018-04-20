@@ -18,9 +18,9 @@
       </div>
     </div>
     <div *ngIf="step === 'start'">
-      <button ion-button color="secondary" (click)="goToLogin()" clear large>Вход</button>
+      <button ion-button color="secondary" (click)="goToLogin()" color="blue" clear large>Вход</button>
       <span> / </span>
-      <button ion-button color="secondary" (click)="goToRegistration()"clear large>Регистрация</button>
+      <button ion-button color="secondary" (click)="goToRegistration()" color="blue" clear large>Регистрация</button>
     </div>
     <div *ngIf="step === 'registration'">
       <form (ngSubmit)="registration()">
@@ -53,8 +53,8 @@
             </div>
           </ion-item>
         </ion-card>
-        <button ion-button type="button" (click)="goToStart()" clear>Назад</button>
-        <button ion-button type="submit" outline>Присоединиться</button>
+        <button ion-button type="button" class="back" (click)="goToStart()" color="blue" clear>Назад</button>
+        <button ion-button type="submit" color="blue" outline>Присоединиться</button>
       </form>
     </div>
     <form (ngSubmit)="login()" *ngIf="step === 'login'">
@@ -67,8 +67,8 @@
         <ion-input type="password" name="password-one"></ion-input>
       </ion-item>
       <br>
-      <button ion-button type="button" (click)="goToStart()" clear>Назад</button>
-      <button ion-button type="submit" outline>Войти</button>
+      <button ion-button type="button" class="back" (click)="goToStart()" color="blue" clear>Назад</button>
+      <button ion-button type="submit" color="blue" outline>Войти</button>
     </form>
   </div>
 </ion-content>

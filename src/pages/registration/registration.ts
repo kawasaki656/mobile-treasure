@@ -53,11 +53,15 @@ export class RegistrationPage {
     if(this.pass1 !== this.pass2) {
       this.validationErrors.push('Пароли не совпадают, пожалуйста проверьте их')
     }
-    if(this.phone.length < 18) {
-      this.validationErrors.push('Телефон введен некорректно, введите пожалуйста это поле верно')
+    if(this.phone) {
+      if (this.phone.length < 18) {
+        this.validationErrors.push('Телефон введен некорректно, введите пожалуйста это поле верно')
+      }
     }
-    if(this.pass1.length < 6) {
-      this.validationErrors.push('Пароль должен содержать минимум 6 символов')
+    if(this.pass1) {
+      if (this.pass1.length < 6) {
+        this.validationErrors.push('Пароль должен содержать минимум 6 символов')
+      }
     }
 
     if(this.validationErrors.length > 0) {
