@@ -12,8 +12,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { EventPage } from "../pages/event/event";
 import { StartPage } from "../pages/start/start";
-import {RegistrationPage} from "../pages/registration/registration";
+import { RegistrationPage } from "../pages/registration/registration";
 import { BrMaskerModule } from 'brmasker-ionic-3';
+import { ApiProvider } from '../providers/api/api';
+import { HttpClientModule } from "@angular/common/http";
+import { DataProvider } from '../providers/data/data';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
   imports: [
     BrowserModule,
     IonicModule.forRoot(cladApp),
-    BrMaskerModule
+    BrMaskerModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +49,9 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApiProvider,
+    DataProvider
   ]
 })
 export class AppModule {}

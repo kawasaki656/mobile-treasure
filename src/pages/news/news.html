@@ -7,17 +7,17 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
+  <ion-card *ngFor="let item of news">
     <ion-card-header>
       <ion-item>
-        <h1>Открытие</h1>
-        <p>Май 5, 2018</p>
+        <h1>{{item.header}}</h1>
+        <p>{{item.created}}</p>
       </ion-item>
     </ion-card-header>
 
     <ion-card-content>
       <ion-item>
-        Мы запустили приложение и рады будем запускать и проводить для вас новые игры. Уже сейчас доступна первая игра.
+        {{item.information}}
       </ion-item>
     </ion-card-content>
   </ion-card>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
+import {TabsPage} from "../tabs/tabs";
 
 /**
  * Generated class for the RegistrationPage page.
@@ -16,9 +17,11 @@ import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angula
 export class RegistrationPage {
   valid: boolean;
   phone: string;
+  pass1: string;
+  pass2: string;
   phoneMask: Object;
   step: string;
-  validationErrors:Array;
+  validationErrors:Array<string>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
     this.phone = "+375";
@@ -74,7 +77,7 @@ export class RegistrationPage {
   }
 
   login() {
-    console.log("done")
+    this.navCtrl.push(TabsPage);
   }
 
   goToRegistration() {

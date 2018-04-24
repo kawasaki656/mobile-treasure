@@ -1,6 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
 import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
-import {TabsPage} from "../tabs/tabs";
 import {RegistrationPage} from "../registration/registration";
 
 /**

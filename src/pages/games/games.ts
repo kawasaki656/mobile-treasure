@@ -12,12 +12,16 @@ export class GamesPage {
 
   }
 
+  //show event or play game
+  show() {
+
+  }
   showEvent(name:string) {
     this.navCtrl.push(EventPage, {name: name});
   }
 
   //for users which join to event
-  showGame() {
+  playGame() {
 
   }
 
