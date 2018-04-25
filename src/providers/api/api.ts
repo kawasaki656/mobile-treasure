@@ -15,6 +15,7 @@ export class ApiProvider {
   constructor(public http: HttpClient, public dataProvider: DataProvider) {
     console.log("API Provider");
     this.getNews();
+    this.getGames();
   }
 
   getNews() {
@@ -28,6 +29,36 @@ export class ApiProvider {
         created: "Май 6 2018",
         information: "Открыли первую игру, начало назначено на ..."
       }];
+  }
+
+  getGames() {
+    this.dataProvider.games = [
+      {
+        name: "Первые кладоискатели",
+        created: "5 Мая 2018",
+        photo: "Event1",
+        place: "г. Орша",
+        members: 34,
+        max: 100,
+        likes: 31,
+        codesCount: 3,
+        started: "Ориентировочно 12 Мая 2018",
+        cost: "5 BYN",
+        prize: "1) 150 BYN 2) 50 BYN"
+      }, {
+        name: "Не отходи от центра",
+        created: "6 Мая 2018",
+        photo: "Event2",
+        place: "г. Орша",
+        members: 12,
+        max: 100,
+        likes: 19,
+        codesCount: 4,
+        started: "Ориентировочно 19 Мая 2018",
+        cost: "5 BYN",
+        prize: "1) 150 BYN 2) 50 BYN"
+      }
+    ];
   }
 
 }

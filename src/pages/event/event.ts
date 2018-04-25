@@ -14,10 +14,10 @@ import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular
   templateUrl: 'event.html',
 })
 export class EventPage {
+  event:string;
 
-  name:string;
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
-    this.name = navParams.get('name');
+    this.event = navParams.get('event');
   }
 
   ionViewDidLoad() {

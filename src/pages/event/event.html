@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{name}}</ion-title>
+    <ion-title>{{event.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -20,28 +20,28 @@
     </ion-list-header>
     <ion-item>
       <b>Место: </b>
-      <span>г.Орша</span>
+      <span>{{event.place}}</span>
       <br>
       <b>Мест: </b>
-      <span>100</span>
+      <span>{{event.max}}</span>
       <br>
       <b>Участников: </b>
-      <span>34</span>
+      <span>{{event.members}}</span>
       <br>
       <b>Сложность: </b>
-      <span>3 кода</span>
+      <span>{{event.codesCount}} кода</span>
       <br>
       <b>Начало: </b>
-      <span>ориентировочно 10.12.2018, 18:00</span>
+      <span>{{event.started}}</span>
       <br>
       <b>Обсуждение: </b>
       <a href="onliner.by">Перейти</a>
       <br>
       <b>Стоимость: </b>
-      <span>5 BYN</span>
+      <span>{{event.cost}}</span>
       <br>
       <b>Приз: </b>
-      <span>1) 150 BYN, 2) 50 BYN</span>
+      <span>{{event.prize}}</span>
     </ion-item>
   </ion-list>
 
@@ -68,7 +68,7 @@
       <ion-icon color="subtle" large item-start name='pin'></ion-icon>
       <h2>В итоге</h2>
       <div>
-        <p>Будут два победителя, первыми нашедшие коды. Информация о них будет храниться в нашей БД. Мы свяжемся с ними по указанному номеру телефона и вручим приз</p>
+        <p>Будут два победителя, первыми нашедшие коды. Информация о них будет храниться в нашей БД. После нахождения последней подсказки мы сразу вручим приз победителям</p>
       </div>
     </ion-item>
   </ion-list>

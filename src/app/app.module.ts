@@ -17,6 +17,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
 import { ApiProvider } from '../providers/api/api';
 import { HttpClientModule } from "@angular/common/http";
 import { DataProvider } from '../providers/data/data';
+import {PlayPage} from "../pages/play/play";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DataProvider } from '../providers/data/data';
     TabsPage,
     EventPage,
     StartPage,
-    RegistrationPage
+    RegistrationPage,
+    PlayPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { DataProvider } from '../providers/data/data';
     TabsPage,
     EventPage,
     StartPage,
-    RegistrationPage
+    RegistrationPage,
+    PlayPage
   ],
   providers: [
     StatusBar,
