@@ -1,0 +1,19 @@
+page-play {
+  font-family: "sans-serif";
+  ion-content {
+    ion-icon {
+      color: color($colors, secondary);
+    }
+  }
+  #alarm {
+    text-align: center;
+    font-size: 80px;
+    color: color($colors, gray);
+    ion-icon {
+      vertical-align: middle;
+    }
+    span {
+      font-size: 40px;
+    }
+  }
+}
