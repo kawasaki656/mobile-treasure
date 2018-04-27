@@ -9,6 +9,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DataProvider {
   news: any;
+  games: any;
 
   constructor() {
     console.log('Data Provider');

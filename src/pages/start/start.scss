@@ -1,24 +1,28 @@
 page-start {
   h2 {
+    margin-bottom: 50px !important;
     font-size: 9vw;
     color: color($colors, primary);
   }
   h3 {
     font-size: 4vw;
     padding: 20px;
+    margin-top: -35px;
     background: color($colors, primary);
     color: white;
   }
   img {
-    max-width: 100%;
-    height: 60% !important;
+    margin-bottom: 50px;
   }
   .swiper-pagination-bullet-active {
-    background: color($colors, primary);
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    background: color($colors, primary) !important;
   }
   .swiper-pagination-bullet {
-    border-radius: 0;
-    background: color($colors, primary);
+    border-radius: 10px;
+    background: color($colors, gray);
   }
   .swiper-slide-prev {
     opacity: 0 !important;
